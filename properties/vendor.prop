@@ -178,7 +178,6 @@ keyguard.no_require_sim=true
 persist.vendor.delta_time.enable=true
 qemu.hw.mainkeys=0
 ro.com.android.dataroaming=false
-ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 # QCOM
 persist.vendor.qcomsysd.enabled=1
