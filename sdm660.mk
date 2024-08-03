@@ -605,7 +605,8 @@ $(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.
 
 # VNDK
 PRODUCT_PACKAGES += \
-    libstdc++_vendor
+    libstdc++_vendor \
+    libutils.vendor
 
 # WiFi
 PRODUCT_PACKAGES += \
