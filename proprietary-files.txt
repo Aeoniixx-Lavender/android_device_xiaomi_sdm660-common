@@ -609,7 +609,7 @@ system_ext/lib64/vendor.display.postproc@1.0.so;MODULE_SUFFIX=_system_ext|a479ab
 
 # Graphics (Postprocessing) - from Zebra/helios/helios:14/14-32-12.00-UG-U00-STD-HEL-04/15:user/release-keys
 vendor/bin/hw/vendor.display.color@1.0-service|fdccaf00679a2cc64e6bf66d323a01ff083ce79e
-vendor/bin/mm-pp-dpps|bf0892746c71592731e0b9ca72cdfe5316f4b13b
+vendor/bin/mm-pp-dpps|bf0892746c71592731e0b9ca72cdfe5316f4b13b|9138a3941cca1b999f0e9c32d38ccfda823081ab
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib/vendor.display.color@1.0.so|5e90bac8dbb027c82f044b33d74e08c66be18691
 vendor/lib/vendor.display.color@1.1.so|80d8951b59e0ebd05dd1d4af821ef7824b331c2d
