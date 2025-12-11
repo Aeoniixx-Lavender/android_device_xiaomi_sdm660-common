@@ -121,7 +121,9 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname(),
     'system_ext/lib64/libqxrsplitauxservice.qti.so': blob_fixup()
         .add_needed('libaudioclient_shim.so')
-        .add_needed('libwfdservice_shim.so')
+        .add_needed('libwfdservice_shim.so'),
+    'vendor/bin/mm-pp-dpps': blob_fixup()
+        .replace_needed('libtinyxml2.so', 'libtinyxml2_1.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
