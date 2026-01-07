@@ -480,6 +480,7 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 
 # Protobuf
 PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-21.7 \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat \
