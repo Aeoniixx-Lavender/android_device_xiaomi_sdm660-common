@@ -329,13 +329,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
 
-# LiveDisplay native
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay-service.sdm \
-    vendor.lineage.livedisplay-service.sysfs
-
-$(call soong_config_set_bool,livedisplay_sdm,enable_dm,false)
-
 # Logging
 SPAMMY_LOG_TAGS := \
     MiStcImpl \
