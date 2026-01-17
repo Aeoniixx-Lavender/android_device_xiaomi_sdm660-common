@@ -19,7 +19,10 @@ $(call inherit-product, vendor/xiaomi/sdm660-common/sdm660-common-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/config.mk)
 
 # Common Tree Path
-COMMON_PATH := device/xiaomi/sdm660-common
+COMMON_PATH := device/xiaomi/sdm660-common#
+
+#PRODUCT_#BOARD_PLATFORM := sdm660
+#PRODUCT_USES_QCOM_HARDWARE := true
 
 # A/B
 ifeq ($(ENABLE_AB), true)
@@ -451,7 +454,7 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
-    android.hardware.power-service.lineage-libperfmgr \
+    android.hardware.power-service.statix-libperfmgr \
     libqti-perfd-client
 
 # Powerhint
@@ -565,9 +568,11 @@ PRODUCT_SOONG_NAMESPACES += \
     $(COMMON_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/xiaomi \
-    hardware/lineage/interfaces/power-libperfmgr \
-    hardware/qcom-caf/common/libqti-perfd-client
+    vendor/hardware/xiaomi \
+    hardware/statix/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client \
+    hardware/qcom-caf/wlan \
+    vendor/qcom/opensource/display
 
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
@@ -610,7 +615,8 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
 
 # Vibrator
-$(call inherit-product, vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk)
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator-service.xiaomi-awinic
 
 # VNDK
 PRODUCT_PACKAGES += \

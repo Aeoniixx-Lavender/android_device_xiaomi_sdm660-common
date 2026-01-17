@@ -86,7 +86,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix_legacy.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
+    vendor/hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 ifeq ($(filter clover,$(TARGET_DEVICE)),)
@@ -120,12 +120,12 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_VERSION := 4.19
-TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
-TARGET_COMPILE_WITH_MSM_KERNEL := true
+#TARGET_KERNEL_SOURCE := kernel/xiaomi/sdm660
+#TARGET_COMPILE_WITH_MSM_KERNEL := true
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/xiaomi/sdm660_defconfig
+#TARGET_KERNEL_CONFIG := vendor/xiaomi/sdm660_defconfig
 
 # Enable stats logging in LMKD
 TARGET_LMKD_STATS_LOG := false
@@ -220,7 +220,7 @@ SOONG_CONFIG_XIAOMI_SDM660_PARTITION_SCHEME := a
 endif
 
 # SELinux
-include device/lineage/sepolicy/libperfmgr/sepolicy.mk
+include device/statix/sepolicy/libperfmgr/sepolicy.mk
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
